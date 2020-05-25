@@ -12,6 +12,7 @@ app.on("ready", function () {
   mainWindow = new BrowserWindow({
     height: 250,
     width: 300,
+    icon: "assests/icons/win/swiss3.ico",
     webPreferences: {
       nodeIntegration: true,
     },
@@ -47,7 +48,7 @@ app.on("ready", function () {
   //the from the user to the server
   ipcMain.on("item:add", (e, item) => {
     const desktop = path.join("E://User//Desktop//", date);
-
+    // item is the name from the form
     //triggres the request
     download(
       "https://www.google.com/images/srpr/logo3w.png",
